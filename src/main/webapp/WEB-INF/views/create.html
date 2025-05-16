@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>CreateBeverage</title>
+</head>
+<body>
+<h2>Add Beverage</h2>
+<p>
+    <a th:href="@{/beverages}">Back to beverage list</a>
+</p>
+<div id="form">
+    <form th:action="@{/beverages/save}" th:object="${beverage}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}"/>
+        </div>
+        <div>
+            <label>Category</label>
+            <input type="text" th:field="*{category}"/>
+        </div>
+        <div>
+            <label>Quantity</label>
+            <input type="text" th:field="*{quantity}"/>
+        </div>
+        <div>
+            <label>QuantitySold</label>
+            <input type="text" th:field="*{quantitySold}"/>
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="text" th:field="*{price}"/>
+        </div>
+        <div>
+            <label>Detail</label>
+            <input type="text" th:field="*{detail}"/>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+</body>
+</html>

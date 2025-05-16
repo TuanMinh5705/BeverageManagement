@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>DetailBeverage</title>
+</head>
+<body>
+<h3>View Beverage</h3>
+<p>
+    <a th:href="@{/beverages}">
+        Back to beverage list
+    </a>
+</p>
+<div id="detail">
+    <div class="cus-detail">
+        <label>Name:</label>
+        <label th:text="${beverage.name}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Category:</label>
+        <label th:text="${beverage.category}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Quantity:</label>
+        <label th:text="${beverage.quantity}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>QuantitySold:</label>
+        <label th:text="${beverage.quantitySold}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Price:</label>
+        <label th:text="${beverage.price}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Detail:</label>
+        <label th:text="${beverage.detail}"></label>
+    </div>
+</div>
+</body>
+</html>
