@@ -10,4 +10,5 @@ public interface IGenerateRepository<T> {
     void save(T t);
 
     void remove(Long id);
+    List<T> searchByName(String keyword);
 }

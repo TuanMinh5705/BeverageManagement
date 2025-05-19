@@ -46,4 +46,11 @@ public class BeverageRepository implements IBeverageRepository {
             entityManager.remove(beverage);
         }
     }
+
+    @Override
+    public List<Beverage> searchByName(String keyword) {
+        TypedQuery<Beverage> sql = entityManager.createQuery("select b from Beverage b where b.name like :name", Beverage.class);
+        sql.setParameter("name","%"+keyword+"%");
+        return sql.getResultList();
+    }
 }

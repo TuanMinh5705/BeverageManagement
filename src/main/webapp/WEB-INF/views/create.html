@@ -10,7 +10,7 @@
     <a th:href="@{/beverages}">Back to beverage list</a>
 </p>
 <div id="form">
-    <form th:action="@{/beverages/save}" th:object="${beverage}"
+    <form th:action="@{/beverages/save}" th:object="${beverages}"
           method="POST" novalidate="novalidate">
         <input type="hidden" th:field="*{id}"/>
         <div>

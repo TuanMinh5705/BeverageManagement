@@ -31,4 +31,10 @@ public class BeverageService implements IBeverageService {
     public void remove(Long id) {
         iBeverageRepository.remove(id);
     }
+
+    @Override
+    public List<Beverage> searchByName(String keyword) {
+        return iBeverageRepository.searchByName(keyword);
+    }
+
 }

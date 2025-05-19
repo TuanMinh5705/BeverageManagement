@@ -10,4 +10,5 @@ public interface IGenerateService<T> {
     T findById(Long id);
 
     void remove(Long id);
+    List<T> searchByName(String keyword);
 }

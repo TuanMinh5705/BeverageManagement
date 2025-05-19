@@ -17,7 +17,12 @@
     </div>
 </div>
 
-<table id = "beverage">
+<form id="searchBar" action="/beverages/search" method="get">
+    <input type="text" name="keyword" placeholder="Nhập tên sản phẩm">
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<table id = "beverages">
     <thead>
     <tr>
         <th>Name</th>
@@ -32,7 +37,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row,rowStat : ${beverage}">
+    <tr th:each="row,rowStat : ${beverages}">
         <td th:text="${row.getName()}"></td>
         <td th:text="${row.getCategory()}"></td>
         <td th:text="${row.getQuantity()}"></td>

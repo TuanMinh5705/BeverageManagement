@@ -53,7 +53,7 @@
             text-shadow: 0 0 5px #00bcd4, 0 0 10px #00bcd4;
         }
 
-        #beverage {
+        #beverages {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
@@ -65,32 +65,32 @@
             backdrop-filter: blur(5px);
         }
 
-        #beverage th, #beverage td {
+        #beverages th, #beverages td {
             padding: 12px 20px;
             color: #fff;
             text-align: left;
         }
 
-        #beverage th {
+        #beverages th {
             background: rgba(76, 175, 80, 0.9);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        #beverage tr {
+        #beverages tr {
             transition: background 0.3s ease;
         }
 
-        #beverage tr:nth-child(even) {
+        #beverages tr:nth-child(even) {
             background-color: rgba(255, 255, 255, 0.05);
         }
 
-        #beverage tr:hover {
+        #beverages tr:hover {
             background-color: rgba(255, 255, 255, 0.15);
         }
 
-        #beverage td a {
+        #beverages td a {
             padding: 6px 12px;
             background: rgba(0, 188, 212, 0.8);
             border-radius: 4px;
@@ -100,7 +100,7 @@
             transition: background 0.3s;
         }
 
-        #beverage td a:hover {
+        #beverages td a:hover {
             background: rgba(0, 188, 212, 1);
             box-shadow: 0 0 5px #00bcd4;
         }
@@ -145,6 +145,43 @@
         .notify span {
             font-size: 15px;
             color: #90caf9;
+        }
+
+        #searchBar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #searchBar input[type="text"] {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchBar button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #searchBar button:hover {
+            background-color: #45a049;
         }
     </style>
     <script>
